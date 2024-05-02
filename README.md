@@ -20,3 +20,9 @@ Can we create a Maltese AI Lawyer? This is the code used for the 6th May 2024 GD
 * python3 run test.py
 
 # Persistence
+
+Test and visualise embeddings generated
+
+* pip install matplotlib
+* python test_build_vector_store.py
+* python visualise_embeddings.py
