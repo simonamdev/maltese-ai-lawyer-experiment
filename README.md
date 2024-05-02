@@ -12,6 +12,7 @@ Can we create a Maltese AI Lawyer? This is the code used for the 6th May 2024 GD
 * conda activate mal
 * conda install pip
 * pip install llama-index
+(Note: llama-index was at 0.10.33 at time of writing)
 * pip install llama-index-core llama-index-readers-file llama-index-llms-ollama llama-index-embeddings-huggingface
 * ollama pull llama3:8b
 * ollama pull gemma:7b
