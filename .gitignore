@@ -161,3 +161,4 @@ cython_debug/
 
 pdfs/
 bad_pdfs/
+storage/
