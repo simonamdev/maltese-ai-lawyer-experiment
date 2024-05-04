@@ -22,14 +22,14 @@ Settings.embed_model = resolve_embed_model("local:BAAI/bge-small-en-v1.5")
 
 for model in models:
     # ollama
-    Settings.llm = Ollama(model=model, request_timeout=30.0)
+    Settings.llm = Ollama(model=model, request_timeout=300.0)
 
     # print('Creating vector store...')
     index = VectorStoreIndex.from_documents(
         documents,
     )
 
-    query = 'Summarise the context'
+    query = 'Summarise L.N. 203 of 2021 PUBLIC HEALTH ACT CAP 465 of Maltese legislation'
 
     print(f'Running query: "{query}" with model: {model}')
 
