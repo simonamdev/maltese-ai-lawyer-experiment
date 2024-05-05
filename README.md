@@ -18,7 +18,7 @@ Can we create a Maltese AI Lawyer? This is the code used for the 6th May 2024 GD
 - ollama pull llama3:8b
 - ollama pull gemma:7b
 - ollama pull phi3:3.8b
-- python3 test.py
+- python3 test_e2e.py
 
 # Persistence
 
