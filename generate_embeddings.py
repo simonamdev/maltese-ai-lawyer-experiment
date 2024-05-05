@@ -68,7 +68,7 @@ storage_context = StorageContext.from_defaults(vector_store=vector_store)
 # load documents
 logging.info('Loading documents...')
 documents = SimpleDirectoryReader(
-    "./pdfs", num_files_limit=2).load_data(show_progress=True)
+    "./pdfs").load_data(show_progress=True)
 
 # build and load index from documents and storage context
 logging.info('Creating Index...')
