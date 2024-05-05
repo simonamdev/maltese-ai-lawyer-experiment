@@ -64,13 +64,15 @@ redis_client = Redis.from_url("redis://localhost:6379")
 # create the vector store wrapper
 logging.info('Creating Vector Store....')
 vector_store = RedisVectorStore(
-    redis_client=redis_client, schema=custom_schema)
+    redis_client=redis_client, schema=custom_schema
+)
 
 logging.info('Loading index...')
-index = VectorStoreIndex.from_vector_store(vector_store=vector_store)
+index = VectorStoreIndex.from_vector_store(
+    vector_store=vector_store)
 
 logging.info('Starting chat engine...')
-memory = ChatMemoryBuffer.from_defaults(token_limit=1500)
+memory = ChatMemoryBuffer.from_defaults(token_limit=10000)
 
 chat_engine = index.as_chat_engine(
     chat_mode="context",
@@ -78,6 +80,7 @@ chat_engine = index.as_chat_engine(
     system_prompt=(
         "You are a Maltese Law AI assistant. You are able to answer questions about Maltese law from the given context."
     ),
+    similarity_top_k=5
 )
 
 chat_engine.streaming_chat_repl()
