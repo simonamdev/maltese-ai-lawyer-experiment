@@ -30,5 +30,6 @@ Test and visualise embeddings generated
 
 # Persistence for all PDFs
 
+- docker run --name redis-vecdb -d -p 6379:6379 -p 8001:8001 --volume ./redis_storage/:/data redis/redis-stack:latest
 - pip install llama-index-vector-stores-redis redis
 -
