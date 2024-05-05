@@ -25,5 +25,10 @@ Can we create a Maltese AI Lawyer? This is the code used for the 6th May 2024 GD
 Test and visualise embeddings generated
 
 - pip install matplotlib
-- python test_build_vector_store.py
+- python test_generate_embeddings.py
 - python visualise_embeddings.py
+
+# Persistence for all PDFs
+
+- pip install llama-index-vector-stores-redis redis
+-
