@@ -1,6 +1,5 @@
 from llama_index.core import (
     VectorStoreIndex,
-    SimpleDirectoryReader,
     Settings,
 )
 from llama_index.core.embeddings import resolve_embed_model
@@ -8,7 +7,6 @@ from llama_index.vector_stores.redis import RedisVectorStore
 
 import logging
 from llama_index.core.memory import ChatMemoryBuffer
-from llama_index.core import StorageContext
 from redis import Redis
 
 from redisvl.schema import IndexSchema
