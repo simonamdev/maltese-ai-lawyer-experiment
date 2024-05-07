@@ -32,4 +32,11 @@ Test and visualise embeddings generated
 
 - docker run --name redis-vecdb -d -p 6379:6379 -p 8001:8001 --volume ./redis_storage/:/data redis/redis-stack:latest
 - pip install llama-index-vector-stores-redis redis
--
+- python test_generate_embeddings.py
+- python generate_embeddings.py
+
+# Running the final result
+
+- Ensure the redis docker container from above is running
+- Ensure all embeddings have been generated
+- python lawyer.py
